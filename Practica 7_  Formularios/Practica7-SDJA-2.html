@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularios en HTML</title>
+
+<!-- Formulario para contrseñas -->
+<!-- Vincula una hoja de estilos externa desde un servidor (CDN) para usar la librería de iconos Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"> 
+
+</head> 
+<!-- Sanchez Dominguez Jose Alejandro --> 
+<!-- 0657 --> 
+<!-- 5ºI --> 
+<body> 
+
+  <h2>Formulario para contraseñas</h2>
+  
+  <!-- Inicia el formulario; "action" vacio envia los datos a la misma pagina y "method=post" asegura que la contraseña viaje de forma oculta en el cuerpo de la peticion -->
+  <form action="" method="post">
+
+    Ingresa tu usuario:
+    <!-- Campo de entrada de texto normal para que el usuario escriba su nombre -->
+    <input type="text" name="usuario">
+    
+    Ingresa tu contraseña:
+    <!-- Campo de entrada para contraseñas, oculta los caracteres con puntos o asteriscos mientras se escribe  -->
+    <input type="password" name="pass">
+    
+    <br>
+    
+    <!-- Boton que procesa y envia los datos del formulario al servidor -->
+    <input type="submit" value="enviar">
+    
+    <!-- Boton de reinicio que limpia todos los campos del formulario -->
+    <input type="reset" value="borrar">
+    
+  <!-- Cierra la estructura del formulario -->
+  </form>
+
+
+</body> 
+</html>
