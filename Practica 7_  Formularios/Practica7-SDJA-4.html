@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularios en HTML</title>
+
+<!-- Formularios con checkbox  -->
+<!-- Vincula una hoja de estilos externa desde un servidor (CDN) para usar la librería de iconos Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"> 
+
+</head> 
+<!-- Sanchez Dominguez Jose Alejandro --> 
+<!-- 0657 --> 
+<!-- 5ºI --> 
+<body> 
+
+  <h2>Formularios con checkbox</h2>
+  
+  <!-- Inicia el formulario; los datos se procesaran en la misma pagina y se enviaran mediante el metodo oculto POST -->
+  <form action="" method="post">
+    Ingresa tu nombre:
+
+    <!-- Campo de texto de una sola linea para que el usuario escriba su nombre -->
+    <input type="text" name="nombre">
+    <br>
+    Selecciona los lenguajes que conozcas:
+    <br>
+    
+    <!-- Casilla de seleccion multiple (checkbox) para Java.Se puede marcar o dejar en blanco -->
+    <input type="checkbox" name="Java">Java <br>
+    
+    <!-- Casilla de seleccion multiple para Python con su  salto de linea -->
+    <input type="checkbox" name="Python"> Python <br>
+    
+    <!-- Casilla de seleccion multiple para C# con su salto de linea -->
+    <input type="checkbox" name="C#">C# <br>
+    
+    <!-- Casilla de seleccion multiple para Flutter con su respectivo salto de linea -->
+    <input type="checkbox" name="Flutter"> Flutter <br>
+    
+  <!-- Cierra la etiqueta del formulario -->
+  </form>
+
+</body> 
+</html>
