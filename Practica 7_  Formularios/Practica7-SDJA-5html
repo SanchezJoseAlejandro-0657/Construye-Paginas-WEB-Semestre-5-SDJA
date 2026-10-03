@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularios en HTML</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css"> <!--Importacion de hoja de estilos externa desde servidor CDN usando el elemento link-->
+</head>
+<!-- Sanchez Dominguez Jose Alejandro -->
+<!-- 5ºI -->
+<!-- 0657 -->
+<body>
+<h2>Formularios con Radioboton</h2>
+<!--Estructura de formulario interactivo para captura y envio de parametros al servidor-->
+<form action="" method="post"> <!--Contenedor form configurado con el metodo HTTP POST para el envio seguro de datos en el cuerpo de la peticion-->
+Ingresa tu nombre: <!--Nodo de texto plano renderizado de forma directa en el flujo de la pagina-->
+<input type="text" name="nombre"> <!--Control alfanumerico de entrada tipo text con identificador de parametro name="nombre"-->
+<br> <!--Etiqueta vacia br utilizada para forzar un salto de linea en el flujo del DOM-->
+Selecciona el maximo de estudios que tienes: <!--Nodo de texto descriptivo para el grupo de controles de seleccion unica-->
+<br> <!--Etiqueta de salto de linea para ajustar la disposicion vertical de los elementos-->
+<input type="radio" name="estudios" value="1">Sin estudios <br> <!--Control input de tipo radio. Al compartir el mismo name "estudios" genera mutua exclusion y asigna la clave al atributo value-->
+<input type="radio" name="estudios" value="2">Primaria <br> <!--Opcion del grupo radio "estudios" que asigna el valor "2" al payload de la peticion al ser seleccionada-->
+<input type="radio" name="estudios" value="3">Secundaria <br> <!--Opcion del grupo radio "estudios" que asigna el valor "3" al payload de la peticion al ser seleccionada-->
+<input type="radio" name="estudios" value="4">Preparatoria <br> <!--Opcion del grupo radio "estudios" que asigna el valor "4" al payload de la peticion al ser seleccionada-->
+<input type="submit" value="enviar"> <!--Control de tipo submit que dispara el evento de envio del formulario procesando la peticion HTTP-->
+<input type="reset" value="borrar"> <!--Control de tipo reset que restablece los valores de los controles del formulario a sus estados iniciales por defecto-->
+</form> <!--Etiqueta de cierre que delimita el scope del elemento form-->
+</body>
+</html>
