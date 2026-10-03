@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularios en HTML</title>
+<!-- Importacion de hoja de estilos externa desde servidor CDN usando el elemento link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css">
+</head>
+<!-- Sanchez Dominguez Jose Alejandro -->
+<!-- 5ºI -->
+<!-- 0657 -->
+<body>
+<h2>Formularios con seleccion</h2> <!--Elemento de encabezado de segundo nivel que define la jerarquia del contenido-->
+<form action="" method="post"> <!--Contenedor form configurado con el metodo HTTP POST para el envio de datos en el cuerpo de la peticion-->
+Ingresa tu nombre: <!--Nodo de texto plano renderizado en el flujo del DOM-->
+<input type="text" name="nombre"> <!--Control alfanumerico de entrada tipo text con identificador de parametro name="nombre"-->
+<br> <!--Etiqueta vacia br utilizada para forzar un salto de linea en la disposicion del flujo-->
+Selecciona tu pais: <!--Nodo de texto descriptivo para el menu desplegable de seleccion-->
+<select name="pais"> <!--Control de seleccion desplegable select asociado a la clave de parametro name="pais"-->
+<option value="1">Argentina</option> <!--Elemento option que mapea el valor "1" a la clave "pais" al ser seleccionado-->
+<option value="2">España</option> <!--Elemento option que mapea el valor "2" correspondiente a España-->
+<option value="3">Mexico</option> <!--Elemento option que mapea el valor "3" correspondiente a Mexico-->
+<option value="4">Guatemala</option> <!--Elemento option que mapea el valor "4" correspondiente a Guatemala-->
+<option value="5">Honduras</option> <!--Elemento option que mapea el valor "5" correspondiente a Honduras-->
+<option value="6">El Salvador</option> <!--Elemento option que mapea el valor "6" correspondiente a El Salvador-->
+<option value="7">Venezuela</option> <!--Elemento option que mapea el valor "7" correspondiente a Venezuela-->
+<option value="8">Colombia</option> <!--Elemento option que mapea el valor "8" correspondiente a Colombia-->
+</select> <!--Cierre del elemento selector desplegable-->
+<br> <!--Etiqueta vacia br para forzar un salto de linea vertical-->
+<input type="submit" value="enviar"> <!--Control de tipo submit que dispara el evento de envio del formulario procesando la peticion HTTP-->
+<input type="reset" value="borrar"> <!--Control de tipo reset que restablece todos los controles del formulario a sus valores por defecto-->
+</form> <!--Etiqueta de cierre que delimita el scope del elemento form-->
+</body>
+</html>
