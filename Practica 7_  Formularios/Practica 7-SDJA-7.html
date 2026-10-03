@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularios en HTML</title>
+<!-- Importacion de hoja de estilos externa desde servidor CDN para la libreria de iconos FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css">
+</head>
+<!-- Sanchez Dominguez Jose Alejandro -->
+<!-- 5ºI -->
+<!-- 0657 -->
+<body>
+<h2>Formulario con botones</h2> <!--Elemento de encabezado de segundo nivel que define la jerarquia del contenido-->
+<form action="" method="post"> <!--Contenedor form configurado con el metodo HTTP POST para el envio de datos en el cuerpo de la peticion-->
+Ingresa tu nombre: <!--Nodo de texto plano renderizado directamente en el flujo del DOM-->
+<input type="text" name="nombre"> <!--Control alfanumerico de entrada tipo text con identificador de parametro name="nombre"-->
+<br> <!--Etiqueta vacia br utilizada para forzar un salto de linea en la disposicion del flujo visual-->
+<button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button> <!--Elemento button de tipo submit que dispara el evento de envio procesando la peticion HTTP e incrusta un icono mediante la etiqueta i-->
+<button type="reset">Borrar <i class="fa fa-trash"></i></button> <!--Elemento button de tipo reset que restablece los controles a sus valores por defecto e incluye un icono vectorial en su diseño-->
+</form> <!--Etiqueta de cierre que delimita el scope del elemento form-->
+</body>
+</html>
