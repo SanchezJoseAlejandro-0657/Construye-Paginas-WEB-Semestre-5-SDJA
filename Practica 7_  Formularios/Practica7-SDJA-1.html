@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularios en HTML</title>
+<!-- Ejemplo basico -->
+<!-- Vincula una hoja de estilos externa desde un servidor (CDN) para usar la librería de iconos Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"> 
+
+</head> 
+<!-- Sanchez Dominguez Jose Alejandro --> 
+<!-- 0657 --> 
+<!-- 5ºI --> 
+<body> 
+
+
+  <h1>Formularios</h1> 
+
+  <p>Un formulario permite al visitante cargar datos y que sean enviados al servidor.</p> 
+
+  <p>El HTML no tiene la responsabilidad de registrar los datos en el servidor, esta actividad se delega a traves de un lenguaje que se ejecute en el servidor (PHP, ASP, ASP.NET, Node, etc.) </p> 
+
+
+  <h2>Ejemplo basico</h2> 
+
+  <!-- inicia el formulario "action" esta vacio por lo que se envia a la misma pagina, y "method" define que se enviara de forma oculta y segura mediante POST -->
+  <form action="" method="post"> 
+
+    Ingresa tu nombre: 
+
+    <!-- Campo de entrada de texto donde el usuario escribe su nombre, su identificador para el servidor es "nombre" y mide 20 de ancho -->
+    <input type="text" name="nombre" size="20"> 
+
+    <br> 
+
+    <!-- Boton de envio que procesa el formulario y muestra el texto "enviar" -->
+    <input type="submit" value="enviar"> 
+
+  <!-- Cierra la etiqueta del formulario -->
+  </form> 
+
+
+</body> 
+</html>
