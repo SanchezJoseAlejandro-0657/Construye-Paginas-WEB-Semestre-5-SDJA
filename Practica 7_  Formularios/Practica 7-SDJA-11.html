@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularios en HTML</title>
+<!-- Importacion de hoja de estilos externa desde servidor CDN para la libreria de iconos FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css">
+</head>
+<!-- Sanchez Dominguez Jose Alejandro -->
+<!-- 5oI -->
+<!-- 0657 -->
+<body>
+<h2>Formulario con limitaciones</h2> <!--Elemento de encabezado de segundo nivel que define la jerarquia del contenido-->
+<form action="" method="post"> <!--Contenedor form configurado con el metodo HTTP POST para el envio de datos en el cuerpo de la peticion-->
+Ingresa tu nombre: <!--Nodo de texto plano renderizado directamente en el flujo del DOM-->
+<input type="text" name="nombre" disabled><br> <!--Control de entrada alfanumerico inhabilitado mediante el atributo booleano disabled que impide la interaccion del usuario y excluye el parametro en la peticion HTTP-->
+Contraseña: <!--Nodo de texto descriptivo para el campo de clave de acceso-->
+<input type="password" name="pass" maxlength="5"><br> <!--Control de entrada de credenciales tipo password restringido a una longitud maxima de 5 caracteres mediante el atributo maxlength-->
+Comentarios: <!--Nodo de texto descriptivo para el area de texto de solo lectura-->
+<textarea name="comentarios" readonly> <!--Elemento textarea configurado con el atributo booleano readonly que permite la seleccion y envio de datos pero bloquea la modificacion en la interfaz-->
+Este es mi comentario y no se puede borrar <!--Contenido textual predeterminado asignado al valor inicial del nodo textarea-->
+</textarea><br> <!--Etiqueta de cierre del elemento textarea con salto de linea en la disposicion del flujo visual-->
+</form> <!--Etiqueta de cierre que delimita el scope del elemento form-->
+</body>
+</html>
