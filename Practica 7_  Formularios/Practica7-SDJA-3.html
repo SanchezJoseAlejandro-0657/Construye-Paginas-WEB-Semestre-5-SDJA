@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularios en HTML</title>
+
+<!-- Formularios con text area -->
+<!-- Vincula una hoja de estilos externa desde un servidor (CDN) para usar la librería de iconos Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"> 
+
+</head> 
+<!-- Sanchez Dominguez Jose Alejandro --> 
+<!-- 0657 --> 
+<!-- 5ºI --> 
+<body> 
+
+  <h2>Formulario con text area</h2>
+  
+  <!-- Inicia el formulario, los datos se envian a la misma pagina (action vacio) de forma segura y oculta method="post" -->
+  <form action="" method="post">
+  
+    Ingresa tu nombre:
+    <!-- Caja de entrada de texto de una sola linea para almacenar el nombre -->
+    <input type="text" name="nombre">
+    <br>
+    Ingresa tu correo:
+    <!-- Caja de entrada que valida en el navegador si lo que escribio el usuario tiene la estructura de un correo electronico (ej: a.gmail.com) -->
+
+    <input type="email" name="correo">
+    <br>
+    Ingresa tus comentarios:
+
+    <!-- Elemento de entrada de varias lineas. "rows" define su altura inicial (1 fila) y "cols" su ancho (10 caracteres)y se cierra con </textarea> -->
+    <textarea name="comentarios" rows="1" cols="10"></textarea>
+    <br>
+    
+    <!-- Boton encargado de empaquetar y enviar todos los datos recolectados hacia el servidor -->
+    <input type="submit" value="enviar">
+    
+    <!-- Boton de restablecimiento que borra todo el contenido del formulario en un solo clic -->
+    <input type="reset" value="borrar">
+    
+  <!-- Finaliza el contenedor del formulario -->
+  </form>
+
+</body> 
+</html>
