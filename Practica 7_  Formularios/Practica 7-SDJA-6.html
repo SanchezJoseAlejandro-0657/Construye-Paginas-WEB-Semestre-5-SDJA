@@ -11,12 +11,12 @@
 <!-- 5ºI -->
 <!-- 0657 -->
 <body>
-<h2>Formularios con seleccion</h2> <!--Elemento de encabezado de segundo nivel que define la jerarquia del contenido-->
+<h2>Formularios con seleccion</h2>
 <form action="" method="post"> <!--Contenedor form configurado con el metodo HTTP POST para el envio de datos en el cuerpo de la peticion-->
-Ingresa tu nombre: <!--Nodo de texto plano renderizado en el flujo del DOM-->
+Ingresa tu nombre: 
 <input type="text" name="nombre"> <!--Control alfanumerico de entrada tipo text con identificador de parametro name="nombre"-->
-<br> <!--Etiqueta vacia br utilizada para forzar un salto de linea en la disposicion del flujo-->
-Selecciona tu pais: <!--Nodo de texto descriptivo para el menu desplegable de seleccion-->
+<br> 
+Selecciona tu pais: 
 <select name="pais"> <!--Control de seleccion desplegable select asociado a la clave de parametro name="pais"-->
 <option value="1">Argentina</option> <!--Elemento option que mapea el valor "1" a la clave "pais" al ser seleccionado-->
 <option value="2">España</option> <!--Elemento option que mapea el valor "2" correspondiente a España-->
@@ -27,7 +27,7 @@ Selecciona tu pais: <!--Nodo de texto descriptivo para el menu desplegable de se
 <option value="7">Venezuela</option> <!--Elemento option que mapea el valor "7" correspondiente a Venezuela-->
 <option value="8">Colombia</option> <!--Elemento option que mapea el valor "8" correspondiente a Colombia-->
 </select> <!--Cierre del elemento selector desplegable-->
-<br> <!--Etiqueta vacia br para forzar un salto de linea vertical-->
+<br> 
 <input type="submit" value="enviar"> <!--Control de tipo submit que dispara el evento de envio del formulario procesando la peticion HTTP-->
 <input type="reset" value="borrar"> <!--Control de tipo reset que restablece todos los controles del formulario a sus valores por defecto-->
 </form> <!--Etiqueta de cierre que delimita el scope del elemento form-->
