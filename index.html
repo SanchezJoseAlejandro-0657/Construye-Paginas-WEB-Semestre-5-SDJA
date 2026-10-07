@@ -1,30 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>Mi curriculum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 8 SDJA</title>
 </head>
+
 <body>
 
-<h1>Nombre</h1>
-<p>Jose Alejandro Sanchez Dominguez</p>
+<!-- Esta tabla es la barra de navegacion de arriba. Ocupa todo el ancho disponible, no tiene bordes y tiene fondo blanco -->
+<table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF">
+    <!-- El tr tiene valign="middle" para que todo lo que este adentro se alinee al centro verticalmente y no se vea chueco -->
+    <tr valign="middle">
+        
+        <!-- Logo: Ocupa el 10% del espacio. El enlace quita la linea azul de abajo con text-decoration none -->
+        <td width="10%">
+            <a href="#" style="text-decoration: none;">
+                <font face="Arial, Helvetica, sans-serif" size="5" color="#0056D2">
+                    <strong>coursera</strong>
+                </font>
+            </a>
+        </td>
 
-<h1>Edad</h1>
-<p>17 años</p>
+        <!-- Menu Explorar: Ocupa el 25% del ancho. Metemos otra tabla adentro para ordenar el selector y el texto uno al lado del otro -->
+        <td width="25%">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <!-- El formulario manda datos por metodo GET. El inline hace que no brinque de linea -->
+                        <form action="#" method="get" style="margin: 0; display: inline;">
+                            <!-- El onchange hace que el formulario se envie solito apenas el usuario seleccione una opcion -->
+                            <select name="categoria" onchange="this.form.submit()" style="font-family: Arial; font-size: 14px; padding: 4px; cursor: pointer;">
+                                <option value="">Explorar</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <!-- Estos nbsp son espacios en blanco manuales para separar el texto del menu desplegable -->
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" style="text-decoration: none;">
+                            <font face="Arial, Helvetica, sans-serif" size="2" color="#1F1F1F">Titulos de grado</font>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
 
-<h1>Estudios</h1>
-<p>Kinder: Jardin de niños Maria Eriqueta</p>
-<p>Primaria: Alianza por la educacion</p>
-<p>Secundaria: Tecnica No. 91</p>
-<p>Preparatoria:CBTis128</p>
+        <!-- Barra de busqueda: Ocupa el 40% del ancho para que sea la seccion mas larga del menu -->
+        <td width="40%">
+            <form action="#" style="margin: 0;">
+                <!-- El size="35" define que tan larga se ve la cajita de texto a la vista del usuario -->
+                <input type="text" placeholder="¿Que deseas aprender?" size="35" style="padding: 4px;">
+                <input type="submit" value="🔍" style="cursor: pointer;">
+            </form>
+        </td>
 
-<h1>No.Control</h1>
-<p>24308051280657</p>
+        <!-- Iniciar Sesion: Ocupa el 15%. Tiene align="right" para empujar el texto bien hacia la derecha -->
+        <td width="15%" align="right">
+            <!-- Este enlace te manda directo a la pagina interna donde hiciste tu formulario grande -->
+            <a href="iniciarFormulario.html" style="text-decoration: none;">
+                <font face="Arial, Helvetica, sans-serif" size="2" color="#0056D2">
+                    <strong>Iniciar Sesion</strong>
+                </font>
+            </a>
+        </td>
 
-<h1>Especialidad</h1>
-<p>Programacion</p>
+        <!-- Boton Unete Gratis: Ocupa el 10% y centra su contenido con align="center" -->
+        <td width="10%" align="center">
+            <a href="#" style="text-decoration: none;">
+                <!-- Usamos una tabla chiquita con fondo azul y padding de 8 para simular la forma de un boton tradicional -->
+                <table bgcolor="#0056D2" cellpadding="8" cellspacing="0" style="border-radius: 4px;">
+                    <tr>
+                        <td>
+                            <font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">
+                                <strong>Unete gratis</strong>
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+            </a>
+        </td>
 
-<h1>Pasatiempo favorito</h1>
-<p>Tocar la Guitarra</p>
+    </tr>
+</table>
+
+<!-- Esta es una linea divisoria gris muy delgadita para separar el menu del cuerpo principal de la pagina -->
+<hr color="#EEEEEE" size="1">
+
+<!-- CONTENEDOR PRINCIPAL DEL CUERPO: Aqui empieza el contenido fuerte. Tiene un padding de 20 para dejar aire en los costados -->
+<table width="100%" border="0" cellpadding="20" cellspacing="0" bgcolor="#FFFFFF" style="font-family: Arial, Helvetica, sans-serif;">
+  
+  <!-- SECCION 1: LOS DOS BANNERS PRINCIPALES -->
+  <tr>
+    <!-- Banner Izquierdo (Coursera Negro): Ocupa la mitad exacta de la pantalla (50%) -->
+    <!-- valign="top" hace que el contenido empiece desde arriba y padding 30 evita que el texto choque con las esquinas -->
+    <td width="50%" valign="top" bgcolor="#1F1F1F" style="padding: 30px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <!-- Esta celda guarda los textos del banner y ocupa el 60% del espacio interno del bloque negro -->
+          <td width="60%" valign="middle">
+            <font size="6" color="#FFFFFF"><strong>Comience, cambie o avance en su carrera</strong></font><br><br>
+            <font size="2" color="#DDDDDD">Crezca con mas de 10.000 cursos de las mejores organizaciones</font><br><br><br>
+            <!-- Boton Unase Gratis simplificado: Es un texto con fondo blanco y padding que parece boton sin usar otra tabla -->
+            <font size="2" color="#0056D2" bgcolor="#FFFFFF" style="padding: 10px; display: inline-block;"><strong>Unase gratis →</strong></font>
+          </td>
+          <!-- Imagen Banner Izquierdo: Ocupa el 40% restante. Centrada totalmente con align y valign -->
+          <td width="40%" align="center" valign="middle">
+            <table width="140" height="180" border="1" bordercolor="#444444" bgcolor="#333333">
+              <tr><td align="center" valign="middle"><font size="2" color="#999999">[Imagen Mujer]</font></td></tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <!-- Banner Derecho (Microsoft Beige): Tambien ocupa el 50% para quedar exactamente igual al de la izquierda -->
+    <td width="50%" valign="top" bgcolor="#F7EFE5" style="padding: 30px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="60%" valign="middle">
+            <font size="3" color="#E81123"><strong>Microsoft</strong></font><br><br>
+            <font size="6" color="#1F1F1F"><strong>Navigate your career path in tech with Microsoft</strong></font><br><br>
+            <font size="2" color="#555555">Choose the skills that lead to today's most in-demand tech roles with more than 15 all-new courses from Microsoft.</font><br><br>
+            <!-- Boton Enroll Now: Texto con fondo azul que destaca mucho sobre el fondo beige -->
+            <font size="2" color="#FFFFFF" bgcolor="#0056D2" style="padding: 10px; display: inline-block;"><strong>Enroll now →</strong></font>
+          </td>
+          <!-- Imagen Banner Derecho -->
+          <td width="40%" align="center" valign="middle">
+            <table width="140" height="180" border="1" bordercolor="#CCCCCC" bgcolor="#EEEEEE">
+              <tr><td align="center" valign="middle"><font size="2" color="#999999">[Imagenes Tech]</font></td></tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- TITULO DE LA SECCION DE CURSOS -->
+  <tr>
+    <!-- El colspan="2" es clave porque une las dos columnas de arriba en una sola celda gigante para poner el titulo completo -->
+    <td colspan="2"><br><font size="5" color="#1F1F1F"><strong>Cursos de moda</strong></font></td>
+  </tr>
+
+  <!-- SECCION 2: LAS COLUMNAS DE CURSOS -->
+  <tr>
+    <td colspan="2" style="padding: 10px 0 0 0;">
+      <!-- cellspacing="10" genera una separacion automatica y limpia entre la columna 1 y la columna 2 -->
+      <table width="100%" border="0" cellpadding="15" cellspacing="10">
+        <tr>
+          <!-- COLUMNA 1: MAS POPULARES. Tiene fondo gris claro (#F0F4F8) y mide el 50% de ancho -->
+          <td width="50%" valign="top" bgcolor="#F0F4F8">
+            <font size="3" color="#0056D2"><strong>Mas populares →</strong></font><br><br>
+            
+            <!-- Tarjeta 1: Una tabla interna blanca que simula ser una tarjeta flotante de curso -->
+            <table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF" style="margin-bottom: 10px;">
+              <tr>
+                <!-- Cuadro gris simulando el logo del creador del curso (Google) -->
+                <td width="50" height="50" border="1" bordercolor="#E0E0E0" bgcolor="#F9F9F9" align="center"><font size="1">Logo</font></td>
+                <!-- Textos descriptivos con diferentes tamaños de fuente para dar jerarquia visual -->
+                <td valign="top">
+                  <font size="1" color="#777777">Google</font><br>
+                  <font size="2" color="#1F1F1F"><strong>Análisis de datos de Google</strong></font><br>
+                  <font size="1" color="#555555">Certificado profesional · ★ 4.8</font>
+                </td>
+              </tr>
+            </table>
+            
+            <!-- Tarjeta 2: Misma estructura que la tarjeta de arriba para mantener la simetria del diseño -->
+            <table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF">
+              <tr>
+                <td width="50" height="50" border="1" bordercolor="#E0E0E0" bgcolor="#F9F9F9" align="center"><font size="1">Logo</font></td>
+                <td valign="top">
+                  <font size="1" color="#777777">Google</font><br>
+                  <font size="2" color="#1F1F1F"><strong>Fundamentos: Datos, datos...</strong></font><br>
+                  <font size="1" color="#555555">Curso · ★ 4.8</font>
+                </td>
+              </tr>
+            </table>
+          </td>
+
+          <!-- COLUMNA 2: DESTACADO SEMANAL. Segunda columna del mismo tamaño (50%) para que todo encaje simetrico -->
+          <td width="50%" valign="top" bgcolor="#F0F4F8">
+            <font size="3" color="#1F1F1F"><strong>Destacado semanal →</strong></font><br><br>
+            
+            <!-- Tarjeta 1: Estructura de tabla interna blanca que hace el efecto visual de tarjeta de curso flotante -->
+            <table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF" style="margin-bottom: 10px;">
+              <tr>
+                <!-- Cuadro de 50x50 pixeles gris para meter el logo pequeño de la marca creadora -->
+                <td width="50" height="50" border="1" bordercolor="#E0E0E0" bgcolor="#F9F9F9" align="center"><font size="1">Logo</font></td>
+                <!-- Celda para los textos del curso. Usamos varios tamaños de font para que se vea mas ordenado y profesional -->
+                <td valign="top">
+                  <font size="1" color="#777777">Hugging Face</font><br>
+                  <font size="2" color="#1F1F1F"><strong>Desarrollo de IA generativa...</strong></font><br>
+                  <font size="1" color="#555555">Especializacion</font>
+                </td>
+              </tr>
+            </table>
+            
+            <!-- Tarjeta 2: Misma estructura exacta que la anterior para mantener el orden y armonia visual del diseño -->
+            <table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF">
+              <tr>
+                <!-- Otro contenedor de logo cuadrado e independiente del texto -->
+                <td width="50" height="50" border="1" bordercolor="#E0E0E0" bgcolor="#F9F9F9" align="center"><font size="1">Logo</font></td>
+                <td valign="top">
+                  <font size="1" color="#777777">IBM</font><br>
+                  <font size="2" color="#1F1F1F"><strong>IBM Planificacion y Analisis...</strong></font><br>
+                  <font size="1" color="#555555">Certificado profesional · ★ 4.7</font>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+  
+  <!-- ultima fila (tr) de la tabla grande por lo que se clava abajo de forma nativa -->
+
+  <tr>
+    <!-- El colspan="2" une las celdas para que el fondo azul ocupe todo el ancho sin romperse -->
+    <td colspan="2" bgcolor="#0056D2" align="center" valign="middle" style="padding: 40px 20px;">
+      
+      <!-- El line-height: 1.6 separa los renglones un poco para que tus datos escolares se lean mucho mejor -->
+      <font face="Arial, sans-serif" size="3" color="#FFFFFF" style="line-height: 1.6;">
+        <strong>Sanchez Dominguez Jose Alejandro</strong><br>
+        0657<br>
+        5ºI
+      </font>
+    </td>
+  </tr>
+</table> 
 
 </body>
 </html>

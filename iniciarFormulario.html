@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 8 SDJA</title>
+</head>
+
+<body>
+
+<!-- Esta tabla arma la barra superior de navegacion. Se estira al 100% de la pantalla y tiene fondo blanco -->
+<table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF">
+    <!-- El valign="middle" se asegura de que todos los textos, logos y botones queden centrados a la misma altura vertical -->
+    <tr valign="middle">
+        
+        <!-- Logo: Ocupa el 10% del ancho del menu superior. El style le quita el molesto subrayado azul al enlace -->
+        <td width="10%">
+            <a href="#" style="text-decoration: none;">
+                <font face="Arial, Helvetica, sans-serif" size="5" color="#0056D2">
+                    <strong>coursera</strong>
+                </font>
+            </a>
+        </td>
+
+        <!-- Menu Explorar: Mide el 25% de ancho. Usamos otra tabla interna para ordenar el select y el texto uno al lado del otro -->
+        <td width="25%">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <!-- El metodo GET manda lo seleccionado en la barra de direcciones. El display inline evita que salte de linea -->
+                        <form action="#" method="get" style="margin: 0; display: inline;">
+                            <!-- El onchange hace que el formulario se mande solito en automatico al dar clic en la opcion -->
+                            <select name="categoria" onchange="this.form.submit()" style="font-family: Arial; font-size: 14px; padding: 4px; cursor: pointer;">
+                                <option value="">Explorar</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <!-- Los nbsp abren un espacio en blanco de forma manual para separar el texto del menu desplegable -->
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" style="text-decoration: none;">
+                            <font face="Arial, Helvetica, sans-serif" size="2" color="#1F1F1F">Títulos de grado</font>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+
+        <!-- Barra de busqueda: Es la seccion mas ancha (40%) para que la caja de texto se vea espaciosa -->
+        <td width="40%">
+            <form action="#" style="margin: 0;">
+                <!-- El size="35" le da el tamaño horizontal fisico a la caja de texto y padding le da espacio interno para escribir comodo -->
+                <input type="text" placeholder="¿Qué deseas aprender?" size="35" style="padding: 4px;">
+                <input type="submit" value="🔍" style="cursor: pointer;">
+            </form>
+        </td>
+
+        <!-- Boton Cancelar: Mide 15% de ancho. El align="right" empuja el enlace hacia la orilla derecha para que se vea ordenado -->
+        <td width="15%" align="right">
+            <!-- Este enlace te regresa directo a la pagina de inicio index.html si el usuario decide no iniciar sesion -->
+            <a href="index.html" style="text-decoration: none;">
+                <font face="Arial, Helvetica, sans-serif" size="2" color="#0056D2">
+                    <strong>Cancelar</strong>
+                </font>
+            </a>
+        </td>
+
+</table> <!-- Fin de la barra de navegacion superior -->
+
+
+<!-- Una linea gris muy delgada que sirve para separar la barra superior del formulario de abajo -->
+<hr color="#EEEEEE" size="1">
+
+
+<!-- CONTENEDOR CENTRAL DEL FORMULARIO -->
+<!-- La tabla esta centrada con align y tiene un ancho fijo de 500 pixeles para que el formulario no se desparrame en pantallas grandes -->
+<table align="center" width="500" border="0" cellpadding="10" cellspacing="0">
+  <tr>
+    <!-- El align="center" aqui centra el titulo principal y todo el formulario dentro de los 500 pixeles de la tabla -->
+    <td align="center">
+      
+      <!-- Titulo grande del formulario con tamaño de fuente 6 para resaltar mucho -->
+      <h2><font size="6" face="Arial, sans-serif">Ingresa tus datos</font></h2> 
+
+      <!--Contenedor form configurado con el metodo HTTP POST para el envio de datos en el cuerpo de la peticion de forma segura-->
+      <form action="" method="post"> 
+        
+        <!-- Usamos p align="left" para que los textos de instruccion si se queden alineados a la izquierda arriba de sus cajas -->
+        <p align="left">
+          <font size="4" face="Arial, sans-serif">
+            Ingresa tu nombre de usuario:<br>
+            <!-- El size="40" hace que el cuadro de texto sea mas largo y facil de clickear para escribir -->
+            <input type="text" name="nombre" size="40"> 
+          </font>
+        </p>
+
+        <p align="left">
+          <font size="4" face="Arial, sans-serif">
+            Ingresa tu correo electrónico:<br>
+            <!-- El type="email" valida de forma nativa que el usuario ponga un formato de correo real con un @ -->
+            <input type="email" name="correo" size="40">
+          </font>
+        </p>
+
+        <p align="left">
+          <font size="4" face="Arial, sans-serif">
+            Ingresa tu contraseña:<br>
+            <!-- El type="password" es indispensable para ocultar los caracteres con puntitos negros cuando escribes la clave -->
+            <input type="password" name="pass" size="40">
+          </font>
+        </p>
+        
+        <br>
+
+        <!-- Botones de accion: Metidos en una mini tabla interna con cellpadding de 5 para separarlos limpiamente entre si -->
+        <table border="0" cellpadding="5" cellspacing="0">
+          <tr>
+            <td>
+              <!-- El type="submit" le dice al navegador que este boton procesa y manda los datos del formulario -->
+              <button type="submit"><font size="4">Enviar <i class="fa-regular fa-paper-plane"></i></font></button> 
+            </td>
+            <td>
+              <!-- El type="reset" borra en un solo clic todo lo que el usuario haya escrito en las cajas de arriba -->
+              <button type="reset"><font size="4">Borrar <i class="fa fa-trash"></i></font></button> 
+            </td>
+          </tr>
+        </table>
+
+      </form> <!-- Fin del formulario -->
+
+    </td>
+  </tr>
+</table> <!-- Fin del contenedor del formulario -->
+
+</body>
+</html>
